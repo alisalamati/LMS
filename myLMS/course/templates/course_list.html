@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses List</title>
+    <style>
+	h1, h2 {
+	    color: #c44569;
+	}
+
+        table tr {
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        table tr:hover:not(:first-of-type){
+            background-color: blue;
+        }
+        table th{
+            border-bottom: 3px solid black;
+            
+        }
+        table {
+            width: 400px;
+            height: 300px;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .search-box {
+            width: 300px;
+            height: 30px;
+        }
+        .search-button {
+            width: 70px;
+            height: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+	<h1> &#11088; Course List &#11088;</h1>
+    <input class="search-box" type="search" placeholder="search course here..."/>
+    <input class="search-button" type="submit" value="search" />
+    <p>hold mouse on each row will <b><ins style="color: blue;"> specified the course</ins></b></p>
+    
+    <h2>Django Template Tag(for) ===> table</h2>
+    <table>
+	
+<tr>
+    <th>Code</th>
+    <th>Title</th>
+</tr>
+
+	{% for item in course_list %}
+<tr>
+	<td>{{item.Code}}</td>
+	<td>{{item.Title}}</td>
+</tr>
+	{% endfor %}
+
+</table>
+
+{% include "nav.html" %}    
+
+</body>
+</html>
