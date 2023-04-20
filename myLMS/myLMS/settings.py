@@ -82,11 +82,11 @@ DATABASES = {
     #    'NAME': BASE_DIR / 'db.sqlite3',
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db_jsharif',
-        'USER': 'role_jsharif',
-        'PASSWORD':'123456789',
-        'HOST': '127.0.0.1',
-        'PORT':'5432',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD':'',
+        'HOST': '',
+        'PORT':'',
     }
 
 }
