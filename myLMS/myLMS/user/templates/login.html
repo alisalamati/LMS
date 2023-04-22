@@ -1,0 +1,32 @@
+
+<!--DOCTYPE html-->
+<html>
+
+<body>
+
+<h1 style="color:blue;">Welcome to Login page....</h1>
+
+<table>
+    <tr>
+        <td>Username:</td>
+        <td><input type="text" name="username"/> </td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password"/></td>
+
+    </tr>
+    <tr>
+	<td colspan="2"><input type="checkbox" name="forget_password"><label for="forget_password">forget password?</label></td>
+   </tr>
+    <tr>
+        <td colspan= "2"><input type="submit" name="submit" value="Login"></td>
+    </tr>
+</table>
+
+<!-- django template tag -->
+{% include "nav.html"  %}
+
+
+  </body>
+</html>

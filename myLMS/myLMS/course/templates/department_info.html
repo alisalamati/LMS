@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<style>
+ul {
+	background-color:#CACACE;
+	padding:18px;
+	padding-left:revert;
+	width:446px;
+}
+ul li {
+	color: #2B4162;
+	padding-bottom: 20px;
+	font-size: 20px;
+}
+ul a:link {
+	text-decoration: none;
+	color:#FA9F42;
+}
+ul a:visited {
+	text-decoration: none;
+	color:#12BA85;
+}
+
+details summary {
+	font-size:20px;
+	color:#721817;
+}
+.table-1:hover{
+	background-color: #721817;
+	color: #fa9f42;
+}
+table {
+	width: 400px;
+	height: 300px;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+
+}
+
+table tr {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+</style>
+	</head>
+	<body>
+		<h1 style="color:green;">&#128310; Department Info : {{department_obj.title}}</h1>
+		<ul>
+			<li>Code: {{department_obj.code}}</li>
+			<li>Title: {{department_obj.title}}</li>
+			<li>Location: {{department_obj.location}}</li>
+			<li><a href="{{department_obj.title}}">Show Course</a></li>
+		</ul>
+		<details>	
+		<summary>Course List of {{department_obj.title}}</summary>
+	<table>
+		   <tr>
+			<th>Code</th>
+			<th>Title</th>
+			<th>Department</th>
+
+		   </tr>
+			{% for item in related_course_list %}
+		<tr class="table-1">
+			<td>{{item.code}}</td>
+			<td>{{item.title}}</td>
+			<td>{{department_obj.title}}</td>
+
+		</tr>
+
+			{% endfor %}
+		</table>
+
+		</details><br/>
+		<a style="font-size:20px;"  href="http://192.168.164.128:8000/department-list">show all department list</a>
+
+	</body>
+
+</html>

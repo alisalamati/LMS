@@ -1,0 +1,27 @@
+h1 {
+    color: green;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    width: 200px;
+
+}
+li a {
+    display: block;
+    width : 200px;
+    text-decoration: none;
+    padding: 10px 0px 10px 0px;
+    color: black;
+    background-color: #ced6e0;
+    text-align: center;
+    border-bottom: 1px solid black;
+    
+}
+
+li a:hover {
+    background-color: #2f3542;
+    color: white;
+}

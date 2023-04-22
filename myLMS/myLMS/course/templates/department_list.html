@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department List</title>
+    <style>
+	h1, h2 {
+	    color: #c23616;
+	}
+
+        table tr {
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        .table-1:hover{
+		background-color: #721817;
+		color: #fa9f42;
+	}
+	.table-2:hover{
+		background-color: #ff6b81;
+		color: white;
+	}
+	table a:link {
+		text-decoration:none;
+		color: #FA9F42;
+	}
+	table a:visited {
+		text-decoration: none;
+		color:#12BA85;
+	}
+        
+        table th{
+            border-bottom: 3px solid black;
+            
+        }
+        table {
+            width: 400px;
+            height: 300px;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .color-blue {
+            color: blue;
+	    font-size: 30px;
+        }
+      
+    </style>
+</head>
+<body>
+	<h1> &#127984; Department List &#127984;</h1>
+
+    <h2>Django Template Tag(for) ===> table</h2>
+    <p>also we implement <b> migration</b> for <ins>create a will_delete department</ins> and then we <b>delete</b> the column with migration</p>
+
+    <table>
+	    <tr>
+		    <th>Code</th>
+		    <th>Title</th>
+		    <th>More Info</th>
+		    <th>Courses</th>
+	    </tr>
+{% for item in department_list %}
+<tr class="table-1">
+	<td>{{item.code}}</td>
+	<td>{{item.title}}</td>
+	<td><a href="{{item.code}}">Show details</a></td>
+	<td><a href="{{item.code}}/{{item.title}}">Show Course</a></td>
+
+
+</tr>
+{% endfor  %}
+
+
+</table>
+<hr>
+<p class="color-blue">&#9889; Here we filter 3rd </p>
+<table>
+	<tr>
+		<th>Code</th>
+		<th>Title</th>
+		<th>Location</th>
+	</tr>
+{% for item in department_list_filter %}
+	<tr class="table-2">
+		<td>{{item.code}}</td>
+		<td>{{item.title}}</td>
+		<td>{{item.location}}</td>
+	</tr>
+{% endfor  %}
+
+
+</table>
+
+
+{% include "nav.html" %}    
+
+</body>
+</html>

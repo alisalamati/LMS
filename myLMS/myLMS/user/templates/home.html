@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    color: green;
+}
+
+</style>
+<meta charset="UTF-8" />
+<title>assignment 10- Django 1</title>
+</head>
+<body dir="ltr">
+<h1>Welcome to home page</h1>
+<h2>Welcome {{user.Username}}</h2>
+<h3>from {{user.City}}</h3>
+
+<!-- django template tag -->
+{% include "nav.html" %}
+
+<hr>
+<ul>
+    <li>Tehran</li>
+    <li>Mashhad</li>
+    <li>Yazd</li>
+    <li>Shiraz</li>
+    <li>Esfahan</li>
+</ul>
+</body>
+</html>
